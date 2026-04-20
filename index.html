@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced Calculator</h1>
+            <nav>
+                <button class="nav-btn active" onclick="switchTab('scientific')">Scientific</button>
+                <button class="nav-btn" onclick="switchTab('graphing')">Graphing</button>
+                <button class="nav-btn" onclick="switchTab('algebra')">Algebra</button>
+            </nav>
+        </header>
+
+        <!-- Scientific Calculator Tab -->
+        <section id="scientific" class="tab-content active">
+            <div class="display-screen">
+                <input type="text" id="sci-input" placeholder="Enter expression..." readonly>
+                <div id="sci-result" class="result">0</div>
+            </div>
+            <div class="controls">
+                <select id="angle-mode">
+                    <option value="rad">RAD</option>
+                    <option value="deg">DEG</option>
+                    <option value="grad">GRAD</option>
+                </select>
+            </div>
+            <div class="keypad">
+                <button onclick="appendInput('7')">7</button>
+                <button onclick="appendInput('8')">8</button>
+                <button onclick="appendInput('9')">9</button>
+                <button onclick="appendInput('/')">/</button>
+                <button onclick="appendInput('sin(')">sin</button>
+                
+                <button onclick="appendInput('4')">4</button>
+                <button onclick="appendInput('5')">5</button>
+                <button onclick="appendInput('6')">6</button>
+                <button onclick="appendInput('*')">*</button>
+                <button onclick="appendInput('cos(')">cos</button>
+
+                <button onclick="appendInput('1')">1</button>
+                <button onclick="appendInput('2')">2</button>
+                <button onclick="appendInput('3')">3</button>
+                <button onclick="appendInput('-')">-</button>
+                <button onclick="appendInput('tan(')">tan</button>
+
+                <button onclick="appendInput('0')">0</button>
+                <button onclick="appendInput('.')">.</button>
+                <button onclick="calculateSci()">=</button>
+                <button onclick="appendInput('+')">+</button>
+                <button onclick="clearInput()">C</button>
+                
+                <button onclick="appendInput('(')">(</button>
+                <button onclick="appendInput(')')">)</button>
+                <button onclick="appendInput('^')">^</button>
+                <button onclick="appendInput('sqrt(')">√</button>
+                <button onclick="appendInput('pi')">π</button>
+            </div>
+        </section>
+
+        <!-- Graphing Tab -->
+        <section id="graphing" class="tab-content">
+            <div class="graph-controls">
+                <input type="text" id="graph-expr" placeholder="y = f(x) e.g., x^2">
+                <button onclick="drawGraph()">Plot</button>
+            </div>
+            <canvas id="graphCanvas" width="600" height="400"></canvas>
+        </section>
+
+        <!-- Algebra Tab -->
+        <section id="algebra" class="tab-content">
+            <div class="algebra-input">
+                <input type="text" id="algebra-expr" placeholder="Enter expression (e.g., x^2 + 2x)">
+                <select id="algebra-type">
+                    <option value="derive">Derivative</option>
+                    <option value="simplify">Simplify/Evaluate</option>
+                </select>
+                <button onclick="solveAlgebra()">Solve</button>
+            </div>
+            <div id="algebra-result" class="result-box"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

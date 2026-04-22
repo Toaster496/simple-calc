@@ -65,17 +65,17 @@
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                         Browser                             │
-│         HTML5 · CSS3 · Vanilla JS · Canvas API             │
+│         HTML5 · CSS3 · Vanilla JS · Canvas API              │
 └────────────────────────┬────────────────────────────────────┘
                          │  HTTP / REST
 ┌────────────────────────▼────────────────────────────────────┐
 │                    Express.js Server                        │
-│     POST /api/calculate · /api/graph · /api/solve          │
+│     POST /api/calculate · /api/graph · /api/solve           │
 └────────────────────────┬────────────────────────────────────┘
                          │
 ┌────────────────────────▼────────────────────────────────────┐
 │                     Math.js Engine                          │
-│       Parsing · Evaluation · Symbolic Differentiation      │
+│       Parsing · Evaluation · Symbolic Differentiation       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -100,7 +100,7 @@
 ```bash
 # 1. Clone the repo
 git clone https://github.com/Toaster496/simple-calc.git
-cd simple-calc/advanced-calc
+cd simple-calc
 
 # 2. Install dependencies
 npm install

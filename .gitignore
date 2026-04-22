@@ -1,57 +1,47 @@
-# Dependencies
-node_modules/
+# Examples 1:
+(empty)
 
-# Logs and temp files
-*.log
-*.tmp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-
-# Build artifacts
+# Example 2 (Project with artifacts):
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
 dist/
 build/
 target/
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
+# Dependencies
+.venv/
+venv/
+node_modules/
+.julia/
+zig*/
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+# Environment
+.env
+.env.local
+.env.*
+# Editors
+.vscode/
+.idea/
+.mypy_cache/
+.pytest_cache/
 .coverage
+coverage/
 htmlcov/
-.coverage.*
-.python-version
-
-# Compiled and binary
-*.o
-*.obj
-*.out
-*.exe
+*.class
+*.jar
+*.war
+*.ear
 *.dll
 *.so
 *.a
-
-# Cache directories
-.cache/
-.mypy_cache/
-.pytest_cache/
-.gradle/
-.npm/
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Compressed files
+*.dylib
+*.exe
+*.out
 *.zip
 *.gz
 *.tar
@@ -74,3 +64,7 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
